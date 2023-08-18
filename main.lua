@@ -43,7 +43,9 @@ local function main()
 	char:MoveTo(manu.ActivateBUTTON.Position)
 	wait(0.5)
 	fireproximityprompt(manu.ActivateBUTTON.Toggle)
-	wait(0.5)
+	wait(0.2)
+	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
+	wait(0.2)
 	
 	-- Hide
 	if char == nil or char.Humanoid.Health <1 then return end
