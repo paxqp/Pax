@@ -101,7 +101,6 @@ local function main()
 	if char == nil or char.Humanoid.Health <1 then return end
 	wait(1)
 	
-	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(messages[math.random(#messages)] , "All")
 	selling()
 end
 
