@@ -3,7 +3,6 @@ local plr = game.Players.LocalPlayer
 local manufactures = {game.Workspace.Manufacture1, game.Workspace.Manufacture2, game.Workspace.Manufacture3, game.Workspace.Manufacture4}
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("onlybarbarian Made It :)", "All")
 
-
 local function manuGrab()
 	local manu = manufactures[math.random(#manufactures)] 
 	if manu.UIProgressPART.PrintingPROGRESS.MAINUI.Background.LOADING.Size == UDim2.new(0,0,1,0) then return manu end
@@ -11,9 +10,14 @@ local function manuGrab()
 end
 
 local function main()
+	wait(0.1)
+	
 	local char = plr.Character
+	
+	if char == nil or char.Humanoid.Health < 1 then print("Welp") return end
 	-- local manu = manuGrab()
 	local manu = game.Workspace.Manufacture1
+	
 	-- Turn On Machine
 	fireclickdetector(game:GetService("Workspace").clickdoors.MoneyManufacture.MoneyManufactureENTER.ClickDetector)
 	wait(2)
@@ -23,25 +27,26 @@ local function main()
 	wait(0.5)
 	
 	-- Hide
+	if char == nil or char.Humanoid.Health <1 then return end
 	fireclickdetector(game:GetService("Workspace").clickdoors.AccessorySHOP.OutletENTER.ClickDetector)
 	
 	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
-	wait(0.15)
+	wait(0.2)
 	char:MoveTo(manufactures[math.random(#manufactures)].ActivateBUTTON.Position)
-	wait(0.15)
+	wait(0.2)
 	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
-	wait(0.15)
+	wait(0.2)
 	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
-	wait(0.15)
-	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
-	wait(0.15)
+	wait(0.2)
 	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
 	
 	-- Collect Cash
 	wait(40)
 	
+	if char == nil or char.Humanoid.Health <1 then return end
 	fireclickdetector(game:GetService("Workspace").clickdoors.MoneyManufacture.MoneyManufactureENTER.ClickDetector)
 	wait(2)
+	if char == nil or char.Humanoid.Health <1 then return end
 	char:MoveTo(manu.ToggleABLES.CollectCashPART.Position)
 	wait(0.15)
 	fireproximityprompt(manu.ToggleABLES.CollectCashPART.Activate)
@@ -58,6 +63,7 @@ local function main()
 	wait(0.2)
 	
 	-- Sell
+	if char == nil or char.Humanoid.Health <1 then return end
 	fireclickdetector(game:GetService("Workspace").clickdoors.apartment1leave:FindFirstChild("ClickDetector")) 
 	
 	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
@@ -71,12 +77,15 @@ local function main()
 	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
 	
 	game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false task.wait(2) game.Players.LocalPlayer.Character:MoveTo(game:GetService("Workspace").MoneyManufactureBUYER.HumanoidRootPart.Position)
-	
+	if char == nil or char.Humanoid.Health <1 then return end
 	wait(1)
 	fireproximityprompt(game:GetService("Workspace").ManufactureSeller1.SellToggle)
 	wait(3)
 end
 
 while true do
-	main()
+    local success, err = pcall(main)
+    if not success then
+        print(err)  -- print the error to the output
+    end
 end
