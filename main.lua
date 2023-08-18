@@ -22,7 +22,7 @@ local function selling()
 	fireproximityprompt(game:GetService("Workspace").ManufactureSeller1.SellToggle)
 	wait(2)
 	if game.Players.LocalPlayer.Backpack:FindFirstChild("BriefcaseManufacture") ~= nil then
-		Vector3.new(-783.9000244140625, 3.0349996089935303, -392.6236267089844)
+		game.Players.LocalPlayer.Character:MoveTo(game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position)
 		selling()
 	end
 end
@@ -99,7 +99,7 @@ local function main()
 	wait(0.1)
 	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
 	
-	game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false task.wait(2) game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-783.9000244140625, 3.0349996089935303, -392.6236267089844))
+	game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false task.wait(2) game.Players.LocalPlayer.Character:MoveTo(game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position)
 	if char == nil or char.Humanoid.Health <1 then return end
 	wait(1)
 	
