@@ -1,7 +1,7 @@
 local plr = game.Players.LocalPlayer
 
 local manufactures = {game.Workspace.Manufacture1, game.Workspace.Manufacture2, game.Workspace.Manufacture3, game.Workspace.Manufacture4}
-local messages = {"onlybarbarian on dizzy", "Need cash, add me on dizzy onlybarbarian.", "Don't off me, I am doing nothing to you", "TOO FAST!!!", "Boop", "onlybarbarian is the best coder"}
+local messages = {"Meow Meow :)", "Need cash, add me on dizzy onlybarbarian.", "Don't off me, I am doing nothing to you", "TOO FAST!!!", "Boop", "onlybarbarian is the best coder"}
 
 -- ANTI AFK
 local virtualUser = game:service'VirtualUser'
