@@ -13,6 +13,7 @@ game.Players.LocalPlayer.Idled:connect(function() virtualUser:CaptureController(
 local function manuGrab()
 	local manu = manufactures[math.random(#manufactures)] 
 	if manu.UIProgressPART.PrintingPROGRESS.MAINUI.Background.LOADING.Size == UDim2.new(0,0,1,0) then return manu end
+	wait(0.1)
 	manuGrab()
 end
 
@@ -21,6 +22,7 @@ local function selling()
 	fireproximityprompt(game:GetService("Workspace").ManufactureSeller1.SellToggle)
 	wait(2)
 	if game.Players.LocalPlayer.Backpack:FindFirstChild("BriefcaseManufacture") ~= nil then
+		Vector3.new(-783.9000244140625, 3.0349996089935303, -392.6236267089844)
 		selling()
 	end
 end
@@ -32,7 +34,7 @@ local function main()
 	
 	if char == nil or char.Humanoid.Health < 1 then print("Welp") return end
 	-- local manu = manuGrab()
-	local manu = game.Workspace.Manufacture1
+	local manu = manuGrab()
 	
 	-- Turn On Machine
 	fireclickdetector(game:GetService("Workspace").clickdoors.MoneyManufacture.MoneyManufactureENTER.ClickDetector)
