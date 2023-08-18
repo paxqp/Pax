@@ -22,7 +22,7 @@ local function selling()
 	fireproximityprompt(game:GetService("Workspace").ManufactureSeller1.SellToggle)
 	wait(2)
 	if game.Players.LocalPlayer.Backpack:FindFirstChild("BriefcaseManufacture") ~= nil then
-		game.Players.LocalPlayer.Character:MoveTo(game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position)
+	--	game.Players.LocalPlayer.Character:MoveTo(game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position)
 		selling()
 	end
 end
@@ -39,7 +39,7 @@ local function main()
 	-- Turn On Machine
 	fireclickdetector(game:GetService("Workspace").clickdoors.MoneyManufacture.MoneyManufactureENTER.ClickDetector)
 	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(messages[math.random(#messages)] , "All")
-	wait(2)
+	wait(1.5)
 	char:MoveTo(manu.ActivateBUTTON.Position)
 	wait(0.5)
 	fireproximityprompt(manu.ActivateBUTTON.Toggle)
