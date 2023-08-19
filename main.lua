@@ -10,6 +10,8 @@ local virtualUser = game:service'VirtualUser'
 -- Connect a function to the 'Idled' event of the player. This function runs when Roblox detects idling.
 game.Players.LocalPlayer.Idled:connect(function() virtualUser:CaptureController() virtualUser:ClickButton2(Vector2.new()) end)
 
+print("Script is running")
+repeat wait() until plr.customizevalues.level.Value >=15
 
 local function manuGrab()
 	local manu = manufactures[math.random(#manufactures)] 
