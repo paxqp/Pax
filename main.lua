@@ -132,12 +132,12 @@ local function main()
 	selling()
 end
 
---while true do
---    local success, err = pcall(main)
--- 	if not success then
---        print(err)  -- print the error to the output
---    end
---end
+while true do
+    local success, err = pcall(main)
+ 	if not success then
+        print(err)  -- print the error to the output
+    end
+end
 
 
 
