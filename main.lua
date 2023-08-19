@@ -20,9 +20,16 @@ end
 local function selling()
 	print("Selling")
 	fireproximityprompt(game:GetService("Workspace").ManufactureSeller1.SellToggle)
-	wait(2)
+	--wait(0.25)
+	--game.Players.LocalPlayer.Character:MoveTo(Vector3.new(game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.X, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Y, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Z-1))
+	wait(0.15)
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.X, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Y, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Z-2))
+	wait(0.15)
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.X-3, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Y, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Z))
+	wait(0.15)
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.X+3, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Y, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Z-2))
+	
 	if game.Players.LocalPlayer.Backpack:FindFirstChild("BriefcaseManufacture") ~= nil then
-	--	game.Players.LocalPlayer.Character:MoveTo(game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position)
 		selling()
 	end
 end
@@ -39,13 +46,13 @@ local function main()
 	-- Turn On Machine
 	fireclickdetector(game:GetService("Workspace").clickdoors.MoneyManufacture.MoneyManufactureENTER.ClickDetector)
 	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(messages[math.random(#messages)] , "All")
-	wait(1.75)
+	wait(1.70)
 	
 	char:MoveTo(manu.ActivateBUTTON.Position)
-	wait(0.5)
+	wait(0.25)
 	
 	fireproximityprompt(manu.ActivateBUTTON.Toggle)
-	wait(1)
+	wait(0.25)
 	
 	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
 	wait(0.2)
@@ -67,17 +74,23 @@ local function main()
 	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
 	wait(0.2)
 	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
+	wait(0.2)
+	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
+	wait(0.2)
+	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
 	
 	-- Collect Cash
-	wait(40)
+	wait(39)
+	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(messages[math.random(#messages)] , "All")
+	wait(0.1)
 	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(messages[math.random(#messages)] , "All")
 	
 	if char == nil or char.Humanoid.Health <1 then return end
 	fireclickdetector(game:GetService("Workspace").clickdoors.MoneyManufacture.MoneyManufactureENTER.ClickDetector)
-	wait(2)
+	wait(1.7)
 	if char == nil or char.Humanoid.Health <1 then return end
 	char:MoveTo(manu.ToggleABLES.CollectCashPART.Position)
-	wait(0.15)
+	wait(0.2)
 	fireproximityprompt(manu.ToggleABLES.CollectCashPART.Activate)
 	wait(0.25)
 	char:MoveTo(manufactures[math.random(#manufactures)].ActivateBUTTON.Position)
@@ -103,22 +116,28 @@ local function main()
 	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
 	wait(0.15)
 	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
+	wait(0.15)
+	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
+	wait(0.1)
+	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
+	wait(0.1)
+	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
+	wait(0.1)
+	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
 	wait(0.1)
 	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
 	
 	game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false task.wait(2) game.Players.LocalPlayer.Character:MoveTo(game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position)
 	if char == nil or char.Humanoid.Health <1 then return end
-	wait(1)
-	
 	selling()
 end
 
-while true do
-    local success, err = pcall(main)
- 	if not success then
-        print(err)  -- print the error to the output
-    end
-end
+--while true do
+--    local success, err = pcall(main)
+-- 	if not success then
+--        print(err)  -- print the error to the output
+--    end
+--end
 
 
 
