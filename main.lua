@@ -39,7 +39,7 @@ local function main()
 	-- Turn On Machine
 	fireclickdetector(game:GetService("Workspace").clickdoors.MoneyManufacture.MoneyManufactureENTER.ClickDetector)
 	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(messages[math.random(#messages)] , "All")
-	wait(1.5)
+	wait(1.75)
 	char:MoveTo(manu.ActivateBUTTON.Position)
 	wait(0.5)
 	fireproximityprompt(manu.ActivateBUTTON.Toggle)
