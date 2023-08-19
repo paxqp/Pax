@@ -40,10 +40,13 @@ local function main()
 	fireclickdetector(game:GetService("Workspace").clickdoors.MoneyManufacture.MoneyManufactureENTER.ClickDetector)
 	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(messages[math.random(#messages)] , "All")
 	wait(1.75)
+	
 	char:MoveTo(manu.ActivateBUTTON.Position)
 	wait(0.5)
+	
 	fireproximityprompt(manu.ActivateBUTTON.Toggle)
-	wait(0.5)
+	wait(1)
+	
 	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
 	wait(0.2)
 	char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
