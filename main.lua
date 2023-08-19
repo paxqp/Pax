@@ -22,11 +22,11 @@ local function selling()
 	fireproximityprompt(game:GetService("Workspace").ManufactureSeller1.SellToggle)
 	--wait(0.25)
 	--game.Players.LocalPlayer.Character:MoveTo(Vector3.new(game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.X, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Y, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Z-1))
-	wait(0.15)
+	wait(0.2)
 	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.X, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Y, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Z-2))
-	wait(0.15)
+	wait(0.2)
 	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.X-3, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Y, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Z))
-	wait(0.15)
+	wait(0.2)
 	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.X+3, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Y, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Z-2))
 	
 	if game.Players.LocalPlayer.Backpack:FindFirstChild("BriefcaseManufacture") ~= nil then
@@ -46,7 +46,7 @@ local function main()
 	-- Turn On Machine
 	fireclickdetector(game:GetService("Workspace").clickdoors.MoneyManufacture.MoneyManufactureENTER.ClickDetector)
 	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(messages[math.random(#messages)] , "All")
-	wait(1.70)
+	wait(1.75)
 	
 	char:MoveTo(manu.ActivateBUTTON.Position)
 	wait(0.25)
