@@ -2,6 +2,7 @@ local plr = game.Players.LocalPlayer
 
 local manufactures = {game.Workspace.Manufacture1, game.Workspace.Manufacture2, game.Workspace.Manufacture3, game.Workspace.Manufacture4}
 local messages = {"Meow Meow :)", "Need cash, add me on dizzy onlybarbarian.", "Don't off me, I am doing nothing to you", "Mind your own business please :), i'm not doing anything to you", "Boop", "onlybarbarian is the best coder"}
+local ranOnce = false
 
 -- ANTI AFK
 local virtualUser = game:service'VirtualUser'
@@ -32,11 +33,10 @@ local function selling()
 	if game.Players.LocalPlayer.Backpack:FindFirstChild("BriefcaseManufacture") ~= nil then
 		selling()
 	end
+	ranOnce = true
 end
 
 local function main()
-	wait(0.1)
-	
 	local char = plr.Character
 	
 	if char == nil or char.Humanoid.Health < 1 then print("Welp") return end
@@ -45,6 +45,14 @@ local function main()
 	
 	-- Turn On Machine
 	fireclickdetector(game:GetService("Workspace").clickdoors.MoneyManufacture.MoneyManufactureENTER.ClickDetector)
+	if ranOnce then
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.X, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Y, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Z-2))
+		wait(0.2)
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.X-3, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Y, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Z))
+		wait(0.2)
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.X+3, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Y, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Z-2))
+	end
+	
 	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(messages[math.random(#messages)] , "All")
 	wait(1.75)
 	
