@@ -28,7 +28,7 @@ plr.Character:MoveTo(game:GetService("Workspace")["Electric box"].Union.Position
 
 fireclickdetector(game:GetService("Workspace").clickdoors.AccessorySHOP.OutletENTER.ClickDetector)
 
-wait(60)
+wait(58)
 
 -- Grab Ba
 plr.Character:MoveTo(CJ.Interaction.Position)
@@ -62,3 +62,4 @@ plr.Character:MoveTo(CJ.Interaction.Position)
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(game.Workspace.mapshopbuttons.sellbakingsoda.Position.X, game.Workspace.mapshopbuttons.sellbakingsoda.Position.Y, game.Workspace.mapshopbuttons.sellbakingsoda.Position.Z - 3))
 wait(1)
 fireproximityprompt(game.Workspace.mapshopbuttons.sellbakingsoda.sellbakingsoda)
+wait(3)
