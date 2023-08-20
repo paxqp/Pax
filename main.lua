@@ -58,8 +58,6 @@ wait(1.7)
 if char == nil or char.Humanoid.Health < 1 or autofarm == false then return end
 char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
 wait(0.2)
-char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
-wait(0.2)
 char:MoveTo(manu.ActivateBUTTON.Position)
 wait(0.25)
 
@@ -113,8 +111,6 @@ fireclickdetector(game:GetService("Workspace").clickdoors.MoneyManufacture.Money
 wait(1.6)
 
 if char == nil or char.Humanoid.Health < 1 or autofarm == false then return end
-char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
-wait(0.2)
 char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
 wait(0.2)
 char:MoveTo(manu.ToggleABLES.CollectCashPART.Position)
