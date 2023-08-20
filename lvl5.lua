@@ -14,11 +14,12 @@ fireproximityprompt(CJ.Interaction.CookingInteraction)
 wait(0.25)
 
 -- Hide
+plr.Character:MoveTo(CJ.Interaction.Position)
+wait(0.25)
 plr.Character:MoveTo(game:GetService("Workspace").labtabellong.Part.Position)
 wait(0.25)
 plr.Character:MoveTo(CJ.Interaction.Position)
 wait(0.25)
-plr.Character:MoveTo(game:GetService("Workspace").labtabellong.Part.Position)
 plr.Character:MoveTo(game:GetService("Workspace").labtabellong.Part.Position)
 wait(0.25)
 plr.Character:MoveTo(CJ.Interaction.Position)
