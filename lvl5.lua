@@ -40,7 +40,7 @@ wait(56)
 fireclickdetector(doors.cookjob1oblock.CookJob1Oblock.ClickDetector)
 wait(2)
 plr.Character:MoveTo(CJ.Interaction.Position)
-wait(5)
+wait(3)
 
 ----------
 -- Sell --
@@ -69,6 +69,6 @@ plr.Character:MoveTo(game:GetService("Workspace")["Electric box"].Union.Position
 
 
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(game.Workspace.mapshopbuttons.sellbakingsoda.Position.X, game.Workspace.mapshopbuttons.sellbakingsoda.Position.Y, game.Workspace.mapshopbuttons.sellbakingsoda.Position.Z - 3))
-wait(0.25)
+wait(1)
 fireproximityprompt(game.Workspace.mapshopbuttons.sellbakingsoda.sellbakingsoda)
 wait(5)
