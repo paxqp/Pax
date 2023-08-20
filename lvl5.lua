@@ -34,11 +34,11 @@ wait(0.1)
 
 fireclickdetector(game:GetService("Workspace").clickdoors.AccessorySHOP.OutletENTER.ClickDetector)
 
-wait(55)
+wait(56)
 
 -- Grab Ba
 fireclickdetector(doors.cookjob1oblock.CookJob1Oblock.ClickDetector)
-wait(3)
+wait(2)
 plr.Character:MoveTo(CJ.Interaction.Position)
 wait(5)
 
