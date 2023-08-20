@@ -54,7 +54,7 @@ local manu = manuGrab()
 fireclickdetector(game:GetService("Workspace").clickdoors.MoneyManufacture.MoneyManufactureENTER.ClickDetector)
 if char == nil or char.Humanoid.Health < 1 or autofarm == false then return end
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(messages[math.random(#messages)] , "All")
-wait(1.6)
+wait(1.7)
 if char == nil or char.Humanoid.Health < 1 or autofarm == false then return end
 char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
 wait(0.2)
