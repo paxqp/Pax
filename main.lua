@@ -36,9 +36,10 @@ local function selling()
 	wait(0.2)
 	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.X+2, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Y, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Z-2))
 	
-	if game.Players.LocalPlayer.Backpack:FindFirstChild("BriefcaseManufacture") ~= nil then
+	if game.Players.LocalPlayer.Backpack:FindFirstChild("BriefcaseManufacture") then
 		selling()
 	end
+	
 	ranOnce = true
 end
 
