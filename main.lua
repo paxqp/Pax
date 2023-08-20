@@ -59,8 +59,7 @@ if char == nil or char.Humanoid.Health < 1 or autofarm == false then return end
 char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
 wait(0.2)
 char:MoveTo(manu.ActivateBUTTON.Position)
-wait(0.25)
-
+wait(0.3)
 fireproximityprompt(manu.ActivateBUTTON.Toggle)
 wait(0.25)
 if char == nil or char.Humanoid.Health < 1 or autofarm == false then return end
@@ -114,7 +113,7 @@ if char == nil or char.Humanoid.Health < 1 or autofarm == false then return end
 char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
 wait(0.2)
 char:MoveTo(manu.ToggleABLES.CollectCashPART.Position)
-wait(0.2)
+wait(0.3)
 fireproximityprompt(manu.ToggleABLES.CollectCashPART.Activate)
 wait(0.25)
 char:MoveTo(manufactures[math.random(#manufactures)].ActivateBUTTON.Position)
