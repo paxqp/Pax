@@ -38,7 +38,7 @@ wait(58)
 
 -- Grab Ba
 fireclickdetector(doors.cookjob1oblock.CookJob1Oblock.ClickDetector)
-wait(2)
+wait(3)
 plr.Character:MoveTo(CJ.Interaction.Position)
 wait(5)
 
