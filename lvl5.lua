@@ -25,6 +25,11 @@ wait(0.25)
 plr.Character:MoveTo(CJ.Interaction.Position)
 wait(0.25)
 plr.Character:MoveTo(game:GetService("Workspace")["Electric box"].Union.Position)
+wait(0.25)
+plr.Character:MoveTo(CJ.Interaction.Position)
+wait(0.25)
+plr.Character:MoveTo(game:GetService("Workspace").labtabellong.Part.Position)
+wait(0.1)
 
 fireclickdetector(game:GetService("Workspace").clickdoors.AccessorySHOP.OutletENTER.ClickDetector)
 
