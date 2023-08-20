@@ -1,3 +1,4 @@
+wait()
 local plr = game.Players.LocalPlayer
 local char = plr.Character
 local manufactures = {game.Workspace.Manufacture1, game.Workspace.Manufacture2, game.Workspace.Manufacture3, game.Workspace.Manufacture4}
@@ -53,7 +54,7 @@ local manu = manuGrab()
 fireclickdetector(game:GetService("Workspace").clickdoors.MoneyManufacture.MoneyManufactureENTER.ClickDetector)
 if char == nil or char.Humanoid.Health < 1 or autofarm == false then return end
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(messages[math.random(#messages)] , "All")
-wait(1.5)
+wait(1.6)
 if char == nil or char.Humanoid.Health < 1 or autofarm == false then return end
 char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
 wait(0.2)
@@ -109,7 +110,7 @@ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageReque
 
 if char == nil or char.Humanoid.Health < 1 or autofarm == false then return end
 fireclickdetector(game:GetService("Workspace").clickdoors.MoneyManufacture.MoneyManufactureENTER.ClickDetector)
-wait(1.5)
+wait(1.6)
 
 if char == nil or char.Humanoid.Health < 1 or autofarm == false then return end
 char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
