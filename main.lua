@@ -29,15 +29,15 @@ local function selling()
 	if char == nil or char.Humanoid.Health < 1 or autofarm == false then return end
 	print("Selling")
 	fireproximityprompt(game:GetService("Workspace").ManufactureSeller1.SellToggle)
-	if game.Players.LocalPlayer.Backpack:FindFirstChild("BriefcaseManufacture") then return end
+	if game.Players.LocalPlayer.Backpack:FindFirstChild("BriefcaseManufacture") ~= nil then else return end
 	wait(0.2)
-	if game.Players.LocalPlayer.Backpack:FindFirstChild("BriefcaseManufacture") then return end
+	if game.Players.LocalPlayer.Backpack:FindFirstChild("BriefcaseManufacture") ~= nil then else return end
 	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.X, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Y, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Z-2))
 	wait(0.2)
-	if game.Players.LocalPlayer.Backpack:FindFirstChild("BriefcaseManufacture") then return end
+	if game.Players.LocalPlayer.Backpack:FindFirstChild("BriefcaseManufacture") ~= nil then else return end
 	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.X-2, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Y, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Z))
 	wait(0.2)
-	if game.Players.LocalPlayer.Backpack:FindFirstChild("BriefcaseManufacture") then return end
+	if game.Players.LocalPlayer.Backpack:FindFirstChild("BriefcaseManufacture") ~= nil then else return end
 	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.X+2, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Y, game.Workspace.MoneyManufactureBUYER.HumanoidRootPart.Position.Z-2))
 	
 	if game.Players.LocalPlayer.Backpack:FindFirstChild("BriefcaseManufacture") ~= nil then
