@@ -33,17 +33,25 @@ wait(0.25)
 plr.Character:MoveTo(CJ.Interaction.Position)
 wait(0.25)
 plr.Character:MoveTo(game:GetService("Workspace").labtabellong.Part.Position)
+wait(0.25
+plr.Character:MoveTo(CJ.Interaction.Position)
+wait(0.25)
+plr.Character:MoveTo(game:GetService("Workspace").labtabellong.Part.Position)
+wait(0.25)
+plr.Character:MoveTo(CJ.Interaction.Position)
+wait(0.25)
+plr.Character:MoveTo(game:GetService("Workspace").labtabellong.Part.Position)
 wait(0.1)
 
 fireclickdetector(game:GetService("Workspace").clickdoors.AccessorySHOP.OutletENTER.ClickDetector)
 
-wait(56)
+wait(55)
 
 -- Grab Ba
 fireclickdetector(doors.cookjob1oblock.CookJob1Oblock.ClickDetector)
 wait(2)
 plr.Character:MoveTo(CJ.Interaction.Position)
-wait(3)
+wait(1)
 
 ----------
 -- Sell --
