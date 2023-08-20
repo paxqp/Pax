@@ -31,11 +31,11 @@ wait(0.1)
 
 fireclickdetector(game:GetService("Workspace").clickdoors.AccessorySHOP.OutletENTER.ClickDetector)
 
-wait(58)
+wait(55)
 
 -- Grab Ba
 plr.Character:MoveTo(CJ.Interaction.Position)
-wait(0.25)
+wait(2)
 
 ----------
 -- Sell --
