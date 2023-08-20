@@ -57,10 +57,15 @@ wait(0.25)
 plr.Character:MoveTo(CJ.Interaction.Position)
 wait(0.25)
 plr.Character:MoveTo(game:GetService("Workspace")["Electric box"].Union.Position)
-
+wait(0.25)
+plr.Character:MoveTo(game:GetService("Workspace").labtabellong.Part.Position)
+wait(0.25)
+plr.Character:MoveTo(CJ.Interaction.Position)
+wait(0.25)
+plr.Character:MoveTo(game:GetService("Workspace")["Electric box"].Union.Position)
 
 
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(game.Workspace.mapshopbuttons.sellbakingsoda.Position.X, game.Workspace.mapshopbuttons.sellbakingsoda.Position.Y, game.Workspace.mapshopbuttons.sellbakingsoda.Position.Z - 3))
-wait(1)
+wait(0.25)
 fireproximityprompt(game.Workspace.mapshopbuttons.sellbakingsoda.sellbakingsoda)
-wait(3)
+wait(5)
