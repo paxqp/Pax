@@ -6,7 +6,7 @@ local CJ = game:GetService("Workspace"):FindFirstChild("CookingJob")
 if CJ.Interaction.progress.progressback.mainprogress.Size ~= UDim2.new(0,0,0,15) then return end
 
 fireclickdetector(doors.cookjob1oblock.CookJob1Oblock.ClickDetector)
-wait(2)
+wait(1.7)
 
 plr.Character:MoveTo(CJ.Interaction.Position)
 wait(0.25)
@@ -54,8 +54,7 @@ wait(0.25)
 plr.Character:MoveTo(game:GetService("Workspace")["Electric box"].Union.Position)
 
 
-wait(2)
-plr.Character:MoveTo(CJ.Interaction.Position)
+wait(1.7)
 
 
 
