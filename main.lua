@@ -105,7 +105,7 @@ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageReque
 
 if char == nil or char.Humanoid.Health < 1 or autofarm == false then return end
 fireclickdetector(game:GetService("Workspace").clickdoors.MoneyManufacture.MoneyManufactureENTER.ClickDetector)
-wait(1.7)
+wait(1.5)
 
 if char == nil or char.Humanoid.Health < 1 or autofarm == false then return end
 char:MoveTo(manu.ToggleABLES.CollectCashPART.Position)
