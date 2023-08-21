@@ -179,7 +179,8 @@ Tab:AddButton({
 			for _,tool in ipairs(game.Workspace:GetChildren()) do
 				pcall(grabTool,tool)
 			end
-			
+
+			wait(1)
 			bypass()
 			plr.Character:SetPrimaryPartCFrame(ogPos)
 			
