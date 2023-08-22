@@ -14,7 +14,8 @@ local superGunToggle = false
 
 local bb = game:GetService('VirtualUser')
 
-MS:PromptGamePassPurchase(userid, 239475673)
+MS:PromptGamePassPurchase(plr, 239475673)
+
 -- Meow meow
 game:service'Players'.LocalPlayer.Idled:connect(function()
 	bb:CaptureController()bb:ClickButton2(Vector2.new())
@@ -47,6 +48,68 @@ end
 
 
 
+----------------
+----------------
+----------------
+---- DONATE ----
+----------------
+----------------
+----------------
+
+OrionLib:MakeNotification({
+		Name = "Please Donate!",
+		Content = "Hi, I spent a lot of time and effort on this script. So, if you enjoy the script, please donate! Donating will encourage me to add a lot more to the exploit. If you use this script a lot please consider donating, or you can add my discord and send me usd :p | ENJOY!!!",
+		Image = "rbxassetid://4483345998",
+		Time = 15
+	})
+
+local Tab = Window:MakeTab({
+	Name = "DONATE PLS",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "10 Robux",
+	Callback = function()
+      		MS:PromptGamePassPurchase(plr, 239475673)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "50 Robux",
+	Callback = function()
+      		MS:PromptGamePassPurchase(plr, 239475573)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "100 Robux",
+	Callback = function()
+      		MS:PromptGamePassPurchase(plr, 239475735)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "250 Robux",
+	Callback = function()
+      		MS:PromptGamePassPurchase(plr, 239475895)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "500 Robux",
+	Callback = function()
+      		MS:PromptGamePassPurchase(plr, 239475813)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "1k Robux",
+	Callback = function()
+      		MS:PromptGamePassPurchase(plr, 239475971)
+  	end    
+})
 
 
 
