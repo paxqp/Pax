@@ -1,16 +1,20 @@
+local MS = game:GetService("MarketplaceService")
+local plr = game.Players.LocalPlayer
+local userid = plr.UserId
+
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 local Window = OrionLib:MakeWindow({Name = "ChicoBlocko GUI - Discord: onlybarbarian", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-
 local autofarm = false
 local LLAF = false
 local gGrab = false
-
 local doors = game:GetService("Workspace").clickdoors
 local superGunToggle = false
 
 local bb = game:GetService('VirtualUser')
 
+MS:PromptGamePassPurchase(userid, 239475673)
 -- Meow meow
 game:service'Players'.LocalPlayer.Idled:connect(function()
 	bb:CaptureController()bb:ClickButton2(Vector2.new())
