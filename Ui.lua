@@ -192,7 +192,7 @@ local Section = Tab:AddSection({
 })
 
 Tab:AddToggle({
-	Name = "Grab Tools (You may die for teleporting too much)",
+	Name = "Auto Grab Tools (Laggy)",
 	Default = false,
 	Callback = function(Value)
 		gGrab = Value
@@ -219,7 +219,7 @@ Tab:AddToggle({
 				print(tool.Name)
 			end
     		
-    		task.wait(0.5)
+    		task.wait(1)
 		end
 	end
 })
@@ -276,7 +276,7 @@ Tab:AddToggle({
 })
 
 Tab:AddButton({
-	Name = "QBuy One Shot - Need 20k+",
+	Name = "One Shot - $6k+",
 	Callback = function()
 			local ogPos = game.Players.LocalPlayer.Character.Head.Position
 	
@@ -286,15 +286,13 @@ Tab:AddButton({
       		--fireproximityprompt(game:GetService("Workspace").mapshopbuttons.GunPurchasingNPC.talk)
       		wait(0.25)
       		local gui = game.Players.LocalPlayer.PlayerGui:FindFirstChild("GunNPCSeller")
-      		gui.MAINUI.FrontendBUYERSUI.ButtonHolder.Glock18Option.Buy.Button.BindBuy:FireServer()
-      		gui.MAINUI.FrontendBUYERSUI.ButtonHolder.Glock18Option.Buy.Button.BindBuy:FireServer()
-      		gui.MAINUI.FrontendBUYERSUI.ButtonHolder.Glock18Option.Buy.Button.BindBuy:FireServer()
-      		gui.MAINUI.FrontendBUYERSUI.ButtonHolder.Glock18Option.Buy.Button.BindBuy:FireServer()
-      		gui.MAINUI.FrontendBUYERSUI.ButtonHolder.Glock18Option.Buy.Button.BindBuy:FireServer()
-      		gui.MAINUI.FrontendBUYERSUI.ButtonHolder.Glock18Option.Buy.Button.BindBuy:FireServer()
-      		gui.MAINUI.FrontendBUYERSUI.ButtonHolder.Glock18Option.Buy.Button.BindBuy:FireServer()
-      		gui.MAINUI.FrontendBUYERSUI.ButtonHolder.Glock18Option.Buy.Button.BindBuy:FireServer()
-      		gui.MAINUI.FrontendBUYERSUI.ButtonHolder.Glock18Option.Buy.Button.BindBuy:FireServer()
+      		gui.MAINUI.FrontendBUYERSUI.ButtonHolder.BerettaOption.Buy.Button.BindBuy:FireServer()
+      		gui.MAINUI.FrontendBUYERSUI.ButtonHolder.BerettaOption.Buy.Button.BindBuy:FireServer()
+      		gui.MAINUI.FrontendBUYERSUI.ButtonHolder.BerettaOption.Buy.Button.BindBuy:FireServer()
+      		gui.MAINUI.FrontendBUYERSUI.ButtonHolder.BerettaOption.Buy.Button.BindBuy:FireServer()
+      		gui.MAINUI.FrontendBUYERSUI.ButtonHolder.BerettaOption.Buy.Button.BindBuy:FireServer()
+      		gui.MAINUI.FrontendBUYERSUI.ButtonHolder.BerettaOption.Buy.Button.BindBuy:FireServer()
+      		gui.MAINUI.FrontendBUYERSUI.ButtonHolder.BerettaOption.Buy.Button.BindBuy:FireServer()
       		wait(2)
       		bypass()
       		game.Players.LocalPlayer.Character:MoveTo(ogPos)
