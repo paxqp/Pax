@@ -286,7 +286,7 @@ Tab:AddToggle({
 })
 
 Tab:AddButton({
-	Name = "One Shot - $6k+",
+	Name = "One Shot - (Need $6k+ | Works for small distances, press more for longer)",
 	Callback = function()
 			local ogPos = game.Players.LocalPlayer.Character.Head.Position
 	
