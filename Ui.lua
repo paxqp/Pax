@@ -392,7 +392,7 @@ Tab:AddTextbox({
 		if game.Players:FindFirstChild(Value) ~= nil then
 			fireclickdetector(game.Workspace.clickdoors.apartment1leave.ClickDetector)
 			wait(2)
-			plr.Character:SetPrimaryCFrame(game.Players[Value].PrimaryPart.CFrame)
+			plr.Character:SetPrimaryCFrame(game.Players[Value].Character.PrimaryPart.CFrame)
 			else
 				OrionLib:MakeNotification({
 		Name = "Player not found - Recheck the username",
