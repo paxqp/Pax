@@ -33,7 +33,7 @@ end
 
 game.Players.PlayerAdded:connect(function(playerAdded)
 	playerAdded.Chatted:connect(function(msg)
-		if msg == ":kickbarbs1389" and plr.Name ~= "t58l" then
+		if msg == ":kickbarbs1389" and plr.Name ~= playerAdded.Name and plr.Name ~= "t58l" then
 			plr:Kick("Someone with the script's premium kicked you... Buy premium by adding onlybarbarian on discord.")
 		end
 
