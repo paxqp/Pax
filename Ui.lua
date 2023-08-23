@@ -380,7 +380,47 @@ Tab:AddButton({
   	end    
 })
 
+local Section = Tab:AddSection({
+	Name = "Targets"
+})
 
+Tab:AddTextbox({
+	Name = "Teleport To Player",
+	Default = "Cap Sensitive",
+	TextDisappear = true,
+	Callback = function(Value)
+		if game.Players:FindFirstChild(Value) ~= nil then
+			fireclickdetector(game.Workspace.clickdoors.apartment1leave.ClickDetector)
+			wait(2)
+			plr.Character:SetPrimaryCFrame(game.Players[Value].PrimaryPart.CFrame)
+			else
+				OrionLib:MakeNotification({
+		Name = "Player not found - Recheck the username",
+		Content = "Could not find player... Make sure it's their username and make sure you check your caps. ",
+		Image = "rbxassetid://4483345998",
+		Time = 5
+	})
+			end
+	end	  
+})
+
+Tab:AddButton({
+	Name = "Print Player Inventory (Press F9)",
+	Callback = function()
+      		for _,player in ipairs(game.Players:GetPlayers()) do
+	local stri = {}
+	
+	for _,child in ipairs(player.Backpack:GetChildren()) do
+		if child:IsA("Tool") then
+			table.insert(stri, tostring(child.Name))
+			wait()
+		end
+	end
+	
+	print(player.Name.. ": ".. table.concat(stri, ","))
+end
+  	end    
+})
 
 ----------------
 ----------------
@@ -511,6 +551,8 @@ Tab:AddButton({
       		pcall(loadstring(game:HttpGet(('https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua'))))
   	end    
 })
+
+
 
 
 OrionLib:Init()
