@@ -132,7 +132,23 @@ Tab:AddButton({
 ----------------
 
 
+local Tab = Window:MakeTab({
+	Name = "Premium Benefits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
+Tab:AddButton({
+	Name = "Anti-Ban",
+	Callback = function()
+      		OrionLib:MakeNotification({
+		Name = "Need Premium",
+		Content = "Oof, you need premium for this. Add onlybarbarian on discord to buy it",
+		Image = "rbxassetid://4483345998",
+		Time = 5
+	})
+  	end    
+})
 
 
 
@@ -195,6 +211,15 @@ local Tab = Window:MakeTab({
 	Name = "Exploits",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Glock18",
+	Callback = function()
+
+      		
+      		
+  	end    
 })
 
 local Section = Tab:AddSection({
