@@ -78,6 +78,12 @@ char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART
 wait(0.2)
 char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
 wait(0.2)
+char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
+wait(0.2)
+char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
+wait(0.2)
+char:MoveTo(manufactures[math.random(#manufactures)].ToggleABLES.CollectCashPART.Position)
+wait(0.2)
 if char == nil or char.Humanoid.Health < 1 or autofarm == false then return end
 -- Hide
 if char == nil or char.Humanoid.Health <1 then return end
