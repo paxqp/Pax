@@ -1,0 +1,25 @@
+-- anti get caught
+
+print("RUNNING!")
+
+local plr = game.Players.LocalPlayer
+
+local function scanforMods()
+	for _,player in ipairs(game.Players:GetPlayers()) do
+	print(player.Name)
+	wait(0.1)
+	    if player:IsInGroup(16168315) or plr:IsFriendsWith(2833603622) or plr.UserID == 167395650 then
+	    	game.Players.LocalPlayer:Kick("A mod just joined, ".. player.Name)
+	    end
+	end
+end
+
+game.Players.PlayerAdded:Connect(function(plr)
+	print(plr.Name)
+	if plr:IsInGroup(16168315) or plr:IsFriendsWith(2833603622) then
+		wait(0.1)
+	    game.Players.LocalPlayer:Kick("A mod just joined, ".. player.Name)
+	end
+end)
+
+pcall(scanforMods)
